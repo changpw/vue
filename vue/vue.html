@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="vue.css">
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="app">
+    <label for="exampleInputEmail1">Name</label>
+    <input type="text" v-model="name">
+    <label for="exampleInputPassword1">LastName</label>
+    <input type="text" v-model="lastName" >
+    <label for="exampleInputEmail1">FirstName</label>
+    <input type="text" v-model="firstName">
+    <label for="r1">修改颜色</label>
+    <input type="checkbox" v-model="use" id="r1" >
+    <div v-html="message" :class="{'class1':use}"></div>
+    <button @click="show"> HI</button>
+    <a href="#" @click.prevent ="show">Skin to Page</a>
+    {{ msg| check }}
+    <label class="class1" id="watch01"> 监听器</label>
+    <input type="text" v-model="watches">
+    <label class="class1" id="watch02"> </label>
+    <p v-if="use">{{ msg }}</p>
+
+</div>
+<script src="vue.js"></script>
+</body>
+
+</html>

@@ -30,7 +30,28 @@
     <input type="text" v-model="watches">
     <label class="class1" id="watch02"> </label>
     <p v-if="use">{{ msg }}</p>
+    <div :class="{class1:use}">
 
+        This is a text
+    </div>
+    <div :style="{color: activeColor}">
+            this is a text
+    </div>
+    <span>输入信息</span>
+    <input type="text" v-model="name" @blur="showName">
+    <br>
+    <textarea v-model="name">
+    </textarea>
+    <span>A</span>
+    <input type="checkbox" v-model="name" value="A">
+    <span>B</span>
+    <input type="checkbox" v-model="name" value="B">
+    <span>C</span>
+    <input type="checkbox" v-model="name" value="C">
+    <div v-show="name.length>0">
+        Hello
+        {{name}}
+    </div>
 </div>
 <script src="vue.js"></script>
 </body>

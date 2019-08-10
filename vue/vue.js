@@ -5,9 +5,12 @@
 var vm = new Vue({
     el : '#app',
     data :{
+        datetime:"",
+        name:[],
+        activeColor:"green",
         watches :'',
         msg : 'Hello Vue',
-        use : '',
+        use : "true",
         message:'<h1>Vue</h1>',
         lastName : '',
         firstName : '',
@@ -33,7 +36,19 @@ var vm = new Vue({
     methods :{
         show : function () {
             alert(this.use)
+        },
+        showName: function () {
+            var reg=/^1(3|4|5|6|7|8|9)\d{9}$/;
+            console.log(this.name)
+            console.log(this.datetime)
+            if(reg.test(this.name)){
+                alert('格式正确');
+            }
+            else {
+                alert(this.datetime)
+            }
         }
+
         
     },
     computed:{

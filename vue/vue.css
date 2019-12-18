@@ -2,3 +2,20 @@
     background: #444;
     color: #eee;
 }
+
+.fade-enter{
+	transform: translateX(10rem);
+}
+.fade-enter-active, .fade-leave-active {
+  transition: all 2s;
+}
+.fade-leave-to{
+	transform: translateX(10rem);
+	
+}
+.fade-enter-to{
+	transform: rotate(180deg);
+}
+.fade-leave{
+	transform: rotate(-180deg);
+}

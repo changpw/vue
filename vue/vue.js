@@ -5,6 +5,7 @@
 var vm = new Vue({
     el : '#app',
     data :{
+		show:true,
         watches :'',
         msg : 'Hello Vue',
         use : '',

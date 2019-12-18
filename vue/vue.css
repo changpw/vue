@@ -19,6 +19,7 @@
 .fade-leave{
 	transform: rotate(-180deg);
 }
+
  */
 .bounce-enter-active {
   animation: bounce-in .5s;
@@ -40,3 +41,5 @@
 	/* transform: rotateZ(180deg); */
   }
 }
+
+

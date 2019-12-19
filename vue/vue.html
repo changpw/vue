@@ -13,7 +13,7 @@
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
-<div id="app">
+<div id="app" class="flex">
     <label for="exampleInputEmail1">Name</label>
     <input type="text" v-model="name">
     <label for="exampleInputPassword1">LastName</label>
@@ -23,21 +23,40 @@
     <label for="r1">修改颜色</label>
     <input type="checkbox" v-model="use" id="r1" >
     <div v-html="message" :class="{'class1':use}"></div>
-    <button @click="show"> HI</button>
-    <a href="#" @click.prevent ="show">Skin to Page</a>
-    {{ msg| check }}
+    <button @click.once="show"> HI</button>
+    <a href="#" @click.once ="show">Skin to Page</a>
+    {{ msg| myfilter}}
     <label class="class1" id="watch01"> 监听器</label>
     <input type="text" v-model="watches">
     <label class="class1" id="watch02"> </label>
     <p v-if="use">{{ msg }}</p>
-	<button @click="show=!show">Toggle</button>
-<<<<<<< HEAD
+	<button @click.once="show=!show">Toggle</button>
+	<transition name="slide" class="content">
+		<div v-show="!show" style="text-align: center;">
+			<button @click="show=!show">one</button>
+		</div>
+	</transition>
 	<transition name="bounce">
-=======
-	<transition name="fade">
->>>>>>> b532c41ef1ed68f458c7e81f1c6ed0c14cdfa03d
-		
-		<p v-if="show" style="width: 5rem; border: #444444 0.0625rem solid ;">hello</p>
+			<div v-show="show">
+				<div>
+					<div class="row">
+						<div>用户姓名</div>
+						<div>用户姓名</div>
+						<div>用户姓名</div>
+						<div>用户姓名</div>
+					</div>
+					<div class="row">
+						<div>用户姓名</div>
+						<div>用户姓名</div>
+						<div>用户姓名</div>
+					</div>
+				</div>
+			</div>
+	</transition>
+	<transition name="slide" class="content">
+		<div v-show="show" style="text-align: center;">
+			<button @click="show=!show">two</button>
+		</div>
 	</transition>
 </div>
 <script src="vue.js"></script>

@@ -49,6 +49,7 @@ var vm = new Vue({
               return  this.msg=value
             }
         }
+		
         
     },
     watch : {
@@ -60,7 +61,8 @@ var vm = new Vue({
 
 
 });
- vm.$watch('watches',function (newValue, oldValue) {
-
-     document.getElementById('watch02').innerHTML=newValue
+Vue.filter('myfilter',function(value){
+	console.log('-1')
+	console.log(value+".00")
+	return value+".00";
 })

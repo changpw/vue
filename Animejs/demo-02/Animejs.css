@@ -1,0 +1,30 @@
+.content{
+	position: absolute;
+	left: 20rem;
+	top:20rem;
+	width: 5rem;
+	height: 5rem;
+	border: 1px black solid;
+	line-height: 2rem;
+	text-align: center;	
+}
+.ball{
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	background-color: #000000
+}
+.box{
+	margin: 2rem auto;
+	border: #008000 0.0625rem solid;
+	color: white;
+	background-color: #008000;
+	width: 5rem;
+	height: 5rem;
+	text-align: center;
+	line-height: 5rem;
+}
+.menu{
+	display: flex;
+	justify-content: center;
+}

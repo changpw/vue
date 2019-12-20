@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<link type="text/css" href="./Animejs.css" rel="stylesheet"/>
+	<script type="text/javascript" src="../js/anime.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<body>
+		<div id="app">
+			<button @click="show=!show">change</button>
+			<transition name="fade" v-on:enter="enter" v-on:leave="leave" v-bind:css="false">
+				<div v-show="show" class="green">{{msg}}</div>
+			</transition>
+		</div>
+	</body>
+	<script src="./Animejs.js"></script>
+</html>

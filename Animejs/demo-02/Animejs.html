@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<link type="text/css" href="./Animejs.css" rel="stylesheet"/>
+	<script type="text/javascript" src="../js/anime.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<body>
+		<div id="app">
+			<div class="menu">
+				<div @click="getLocation($event,'a')" class="box" id="a">A</div>
+				<div @click="getLocation($event,'b')" class="box" id="b">B</div>
+				<div @click="getLocation($event,'c')" class="box" id="c">C</div>
+				<div @click="getLocation($event,'d')" class="box" id="d">D</div>
+			</div>
+			<div class="content" id="content" @click="showAll">
+				{{count}}
+				<div>A</div>
+				<div>A</div>
+			</div>
+			<div>
+				<li v-for=""></li>
+			</div>
+			<transition v-on:enter="enter">
+					<div class="ball" v-show="position.show" id="ball"></div>
+			</transition>
+		</div>
+	</body>
+	<script src="./Animejs.js"></script>
+</html>

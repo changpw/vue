@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<link type="text/css" href="./vue动画.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js"></script>
+	<script type="text/javascript" src="js/anime.min.js"></script>
+	<div id="flip-list-demo" class="demo">
+	  <button v-on:click="shuffle">Shuffle</button>
+	  <transition-group name="flip-list">
+	    <span v-for="item in items" v-bind:key="item" style="margin-right: 10px; display: inline-block;">
+	      {{ item }}
+	    </span>
+	  </transition-group>
+	</div>
+	<script src="./vue动画.js"></script>
+</html>

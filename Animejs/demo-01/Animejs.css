@@ -1,0 +1,26 @@
+.demo{
+	width: 2rem;
+	color: #0000FF;
+}
+.css-selector-demo{
+	background-color: #0000FF;
+}
+.blue{
+	width:5rem;
+	height:5rem;
+	background-color: #0000FF;
+}
+.green{
+	width:5rem;
+	height:5rem;
+	background-color: green;
+	line-height: 5rem;
+	text-align: center;
+	
+}
+.fade-enter,.fade-leave-to{
+	opacity: 0;
+}
+.fade-enter-active,.fade-leave-active{
+	transition: all 3s;
+}

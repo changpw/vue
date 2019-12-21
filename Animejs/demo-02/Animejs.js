@@ -7,14 +7,28 @@ const vm = new Vue({
 			top:'',
 			show:false
 		},
-		addList:[]
-		
+		addList:[],
+		list:[]
+	},
+	watch:{
+		addList:function(val){
+			console.log(val)
+			var list=[];
+			for(var it in val){
+				if(list.indexOf(val[it])==-1){
+					list.push(val[it]);
+					console.log(list)
+				}
+			}
+			this.list=list;
+		}
 	},
 	methods:{
 		getLocation:function(e,id){
 			// console.log(JSON.stringify(e.toElement.textContent)+'e---');
 			// console.log(JSON.stringify(id+'e---');
 			console.log(id)
+			let list=this.addList
 			this.addList.push(id)
 			console.log(this.addList)
 			this.position.left=e.clientX
@@ -53,8 +67,9 @@ const vm = new Vue({
 			     if(anim.completed){
 					 let ball=document.getElementById('ball');
 					 ball.style.transform='none';
-					 vm.count++;
-					 
+					 if(vm.count<4){
+						 vm.count++;
+					 }
 				 }		
 			 }
 			});
@@ -65,6 +80,6 @@ const vm = new Vue({
 		},
 		showAll:function(){
 			
-		}	,
+		},
 	}
 })
